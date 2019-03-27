@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoginExampleKotlin</string>
+    <string name="email">Correo Electronico</string>
+    <string name="password">Contrasena</string>
+    <string name="phone">Telefono</string>
+    <string name="in">Entrar</string>
+</resources>
