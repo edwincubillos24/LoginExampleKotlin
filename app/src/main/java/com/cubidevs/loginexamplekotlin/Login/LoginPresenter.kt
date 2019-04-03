@@ -2,7 +2,6 @@ package com.cubidevs.loginexamplekotlin.Login
 
 class LoginPresenter(): ILoginMVP.presenter {
 
-
     private lateinit var view: ILoginMVP.view
     private lateinit var model: ILoginMVP.model
 
@@ -26,5 +25,10 @@ class LoginPresenter(): ILoginMVP.presenter {
                     view.showPhoneError()
                 else
                     model.sendData(mail, password, phone)
+    }
+
+    override fun userLoginSuccessful() {
+        view.showWelcomeMessage()
+        view.navigateToMainActivity()
     }
 }

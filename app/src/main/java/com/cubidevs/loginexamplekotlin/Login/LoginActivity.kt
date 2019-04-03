@@ -1,7 +1,10 @@
 package com.cubidevs.loginexamplekotlin.Login
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
+import com.cubidevs.loginexamplekotlin.Main.MainActivity
 import com.cubidevs.loginexamplekotlin.R
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -37,6 +40,17 @@ class LoginActivity : AppCompatActivity(), ILoginMVP.view {
     override fun showPasswordError() {
         ePassword.error = "Debe digitar una contrasena"
     }
+
+    override fun showWelcomeMessage() {
+        Toast.makeText(this, "Bienvenido",Toast.LENGTH_SHORT).show()
+    }
+
+    override fun navigateToMainActivity() {
+        val intent = Intent (this, MainActivity::class.java)
+        startActivity(intent)
+
+    }
+
 }
 
 
